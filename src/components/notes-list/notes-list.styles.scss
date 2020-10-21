@@ -1,10 +1,85 @@
 .notes-list {
-  flex-basis: 25vw;
-  min-width: 270px;
+
+  
   background-color: var(--bone);
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  transition: all 0.3s ease-in-out
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  .notes-list-content {
+    width: 270px;
+    height: 100%;
+
+    overflow: hidden;
+    overflow-x: scroll;
+    transition: all 0.3s ease-in-out;
+    .sorting-options {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scale(0.5) translateY(-10px);
+
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1) translateY(0);
+      }
+      .ionicon {
+        margin: 0 5px;
+      }
+    }
+  }
+  .notes-list-toggle {
+    position: relative;
+    min-width: 30px;
+    border-right: 2px solid var(--grey);
+    border-left: 2px solid var(--grey);
+    cursor: ew-resize;
+    .toggle-icon {
+      position: absolute;
+      top: 50%;  /* position the top  edge of the element at the middle of the parent */
+      left: 50%; /* position the left edge of the element at the middle of the parent */
+      transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+
+      font-size: 1em;
+      display: inline;
+      margin: auto 0px;
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+      contain: strict;
+      fill: currentcolor;
+      box-sizing: content-box !important;
+      
+    }
+  }
 }
+
+
 @media (max-width: 600px) {
   .notes-list {
+    
     min-width: 100%;
+    flex-direction: column-reverse;
+    .notes-list-content {
+      height: 300px;
+    }
+    .notes-list-toggle{
+      position: relative;
+      border-top: 2px solid var(--grey);
+      border-bottom: 2px solid var(--grey);
+      width: 100%;
+      height: 30px;
+      .toggle-icon {
+        transform: translate(-50%, -50%) rotate(-90deg);
+      }
+    }
   }
 }
