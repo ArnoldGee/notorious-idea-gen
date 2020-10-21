@@ -1,0 +1,10 @@
+.notes-list {
+  flex-basis: 25vw;
+  min-width: 270px;
+  background-color: var(--bone);
+}
+@media (max-width: 600px) {
+  .notes-list {
+    min-width: 100%;
+  }
+}

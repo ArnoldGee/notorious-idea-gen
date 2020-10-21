@@ -1,3 +1,40 @@
 .header {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  height: 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+
+  background-color: var(--grey);
+  color: var(--cream);
+
+  .logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .logo {
+      margin-right: 10px;
+
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+      contain: strict;
+      fill: currentcolor;
+      box-sizing: content-box !important;
+    }
+
+    h1 {
   
+      span {
+        font-size: 0.7em;
+        font-weight: 400;
+      }
+    }
+  }
 }

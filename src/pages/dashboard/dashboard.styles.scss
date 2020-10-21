@@ -1,0 +1,18 @@
+.dashboard {
+  position: absolute;
+  top: 60px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    flex-direction: column-reverse;
+  }
+}
